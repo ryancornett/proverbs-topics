@@ -1,0 +1,1903 @@
+{
+    "meta": {
+        "keyMap": {
+        "acceptableWorship": "Acceptable Worship",
+        "affliction": "Affliction",
+        "ageAndYouth": "Age and Youth",
+        "answeringFools": "Answering Fools",
+        "bearingWitness": "Bearing Witness",
+        "bribes": "Bribes",
+        "causelessCurses": "Causeless Curses",
+        "caution": "Caution",
+        "characterOfAuthorities": "Character of Authorities",
+        "charity": "Charity",
+        "conscience": "Conscience",
+        "contentiousness": "Contentiousness",
+        "contentment": "Contentment",
+        "corruption": "Corruption",
+        "courage": "Courage",
+        "deceit": "Deceit",
+        "devotion": "Devotion",
+        "diligence": "Diligence",
+        "discontentedness": "Discontentedness",
+        "dishonoringParents": "Dishonoring Parents",
+        "distressed": "Distressed",
+        "drunkenness": "Drunkenness",
+        "education": "Education",
+        "enmity": "Enmity",
+        "envy": "Envy",
+        "fidelity": "Fidelity",
+        "flattery": "Flattery",
+        "forgivingEnemies": "Forgiving Enemies",
+        "friendship": "Friendship",
+        "godliness": "Godliness",
+        "godlyFear": "Godly Fear",
+        "godsFavor": "God's Favor",
+        "gossip": "Gossip",
+        "haughtiness": "Haughtiness",
+        "honor": "Honor",
+        "honorableWoman": "HonorableWoman",
+        "honoringAuthority": "HonoringAuthority",
+        "hope": "Hope",
+        "humility": "Humility",
+        "illGottenGains": "Ill-Gotten Gains",
+        "justice": "Justice",
+        "meansOfGrace": "Means of Grace",
+        "meekness": "Meekness",
+        "melancholy": "Melancholy",
+        "mercy": "Mercy",
+        "moderation": "Moderation",
+        "murder": "Murder",
+        "obedience": "Obedience",
+        "parenting": "Parenting",
+        "powerOfWords": "Power of Words",
+        "providence": "Providence",
+        "prudence": "Prudence",
+        "rashVows": "Rash Vows",
+        "rashness": "Rashness",
+        "relationships": "Relationships",
+        "repentance": "Repentance",
+        "reproof": "Reproof",
+        "reputation": "Reputation",
+        "respectingOthers": "Respecting Others",
+        "revenge": "Revenge",
+        "righteousHappiness": "RighteousHappiness",
+        "scorners": "Scorners",
+        "servants": "Servants",
+        "silence": "Silence",
+        "slander": "Slander",
+        "stinginess": "Stinginess",
+        "stubbornness": "Stubbornness",
+        "subjects": "Subjects",
+        "surety": "Surety",
+        "temptation": "Temptation",
+        "uncleanness": "Uncleanness",
+        "ungratefulness": "Ungratefulness",
+        "usefulness": "Usefulness",
+        "virtuousLiving": "Virtuous Living",
+        "wastefulness": "Wastefulness",
+        "wealth": "Wealth",
+        "wisdom": "Wisdom"
+        }
+    },
+    
+    "data": {
+        "parenting": {
+        "description": "Of the comfort, or grief, parents have in their children, according as they are wise or foolish, godly or ungodly",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 20 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 21, 25 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 13, 26 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 15, 16, 24, 25 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 11 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 3 ]
+            }
+        ]
+        },
+    
+        "virtuousLiving": {
+        "description": "Of the world's insufficiency, and religion's sufficiency, to make us happy... and the preference to be therefore given to the gains of virtue above those of this world",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 2, 3 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 4 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 16, 17 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 8, 16 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 6, 11 ]
+            }
+        ]
+        },
+    
+        "diligence": {
+        "description": "Of slothfulness and diligence... particularly the improving or neglecting opportunities",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 4, 26 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 11, 24, 27 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 4, 23 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 19 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 26 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 9 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 15, 24 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 4, 13 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 5, 25, 26 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 13, 29 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 30, 31, 32, 33, 34 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 13, 14, 15, 16 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 18, 23, 27 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 19 ]
+            },
+            {
+            "chapter": 6,
+            "verses": [ 6 ]
+            },
+            {
+            "chapter": 10,
+            "verses": [ 5 ]
+            }
+        ]
+        },
+    
+        "righteousHappiness": {
+        "description": "The happiness of the righteous, and the misery of the wicked",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 6, 9, 16, 24, 25, 27, 28, 29, 30 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 3, 5, 6, 7, 8, 18, 19, 20, 21, 31 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 2, 3, 7, 13, 14, 21, 26, 28 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 6, 9, 14, 15, 21, 22, 25 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 11, 14, 19, 32 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 6, 8, 9, 24, 26, 29 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 12, 15, 16, 18, 21 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 10, 18 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 6 ]
+            }
+        ]
+        },
+    
+        "honor": {
+        "description": "Of honor and dishonor. and of vain-glory",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 8, 9 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 21 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 14, 27 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 2 ]
+            }
+        ]
+        },
+    
+        "obedience": {
+        "description": "The wisdom of obedience, and folly of disobedience",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 8, 17 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 1, 15 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 1, 13, 18 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 5, 10, 12, 31, 32 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 4, 7, 9 ]
+            }
+        ]
+        },
+    
+        "usefulness": {
+        "description": "Of mischievousness and usefulness",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 10, 23 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 9, 10, 11, 23, 27 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 5, 6, 12, 18, 20 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 2 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 29, 30 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 11 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 8 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 23, 27 ]
+            }
+        ]
+        },
+    
+        "powerOfWords": {
+        "description": "The praise of wise and good discourse, and the hurt and shame of an ungoverned tongue",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 11, 13, 14, 20, 21, 31, 32 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 30 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 2, 4, 7, 23, 28 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 20, 23, 24 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 4, 7, 20, 21 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 15 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 23 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 9 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 26 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 11 ]
+            }
+        ]
+        },
+    
+        "contentiousness": {
+        "description": "Of love and hatred, peaceableness and contention",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 1, 9, 14, 19 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 6, 17, 18, 19 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 8 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 17, 21 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 9 ]
+            }
+        ]
+        },
+    
+        "wealth": {
+        "description": "Of the rich and poor",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 5, 22 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 7, 8 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 20, 24 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 11, 23 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 1, 4, 7, 22 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 2, 7 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 6, 11 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 13 ]
+            }
+        ]
+        },
+    
+        "deceit": {
+        "description": "Of lying, fraud, and dissimulation, and of truth and sincerity",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 18 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 17, 19, 22 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 5 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 4 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 14, 17 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 18, 19, 24, 25, 26, 28 ]
+            }
+        ]
+        },
+    
+        "slander": {
+        "description": "Of slandering",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 18 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 27 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 23 ]
+            }
+        ]
+        },
+    
+        "silence": {
+        "description": "Of talkativeness and silence",
+        "references": [
+            {
+            "chapter": 10,
+            "verses": [ 19 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 23 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 27, 28 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 11, 20 ]
+            }
+        ]
+        },
+    
+        "justice": {
+        "description": "Of justice and injustice",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 8, 11 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 15, 26 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 5 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 10, 23 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 10, 11 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 24 ]
+            }
+        ]
+        },
+    
+        "humility": {
+        "description": "Of pride and humility",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 2 ]
+            },
+            {
+            "chapter": 13,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 25, 33 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 5, 18, 19 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 4 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 6, 7 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 25 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 23 ]
+            }
+        ]
+        },
+    
+        "respectingOthers": {
+        "description": "Of despising and respecting others",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 21 ]
+            }
+        ]
+        },
+    
+        "gossip": {
+        "description": "Of tale-bearing",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 13 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 8 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 19 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 20, 22 ]
+            }
+        ]
+        },
+    
+        "rashness": {
+        "description": "Of rashness and deliberation",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 14 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 13 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 2 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 5, 18 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 29 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 8, 9, 10 ]
+            }
+        ]
+        },
+    
+        "surety": {
+        "description": "Of suretiship",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 15 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 18 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 26, 27 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 13 ]
+            }
+        ]
+        },
+    
+        "honorableWoman": {
+        "description": "Of good and bad women, or wives",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 16, 22 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 4 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 13, 14 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 9, 19 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 24 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 15, 16 ]
+            }
+        ]
+        },
+    
+        "mercy": {
+        "description": "Of mercifulness and unmercifulness",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 12,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 21 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 13 ]
+            }
+        ]
+        },
+    
+        "charity": {
+        "description": "Of charity to the poor, and uncharitableness",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 24, 25, 26 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 31 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 5 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 9, 16, 22, 23 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 27 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 7 ]
+            }
+        ]
+        },
+    
+        "contentment": {
+        "description": "Of covetousness and contentment",
+        "references": [
+            {
+            "chapter": 11,
+            "verses": [ 29 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 16, 17, 27 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 4, 5 ]
+            }
+        ]
+        },
+    
+        "meekness": {
+        "description": "Of anger and meekness",
+        "references": [
+            {
+            "chapter": 12,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 17, 29 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 1, 18 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 32 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 12, 26 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 11, 19 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 24, 25 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 15, 28 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 21 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 22 ]
+            }
+        ]
+        },
+    
+        "melancholy": {
+        "description": "Of melancholy and cheerfulness",
+        "references": [
+            {
+            "chapter": 12,
+            "verses": [ 25 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 10, 13 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 13, 15 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 14 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 20, 25 ]
+            }
+        ]
+        },
+    
+        "hope": {
+        "description": "Of hope and expectation",
+        "references": [
+            {
+            "chapter": 13,
+            "verses": [ 12, 19 ]
+            }
+        ]
+        },
+    
+        "prudence": {
+        "description": "Of prudence and foolishness",
+        "references": [
+            {
+            "chapter": 13,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 8, 18, 33 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 14, 21 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 21, 22 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 24 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 2, 15 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 3, 4, 5, 6, 7 ]
+            },
+            {
+            "chapter": 7,
+            "verses": [ 27 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 6, 7, 8, 9, 10, 11 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 5 ]
+            }
+        ]
+        },
+    
+        "fidelity": {
+        "description": "Of treachery and fidelity",
+        "references": [
+            {
+            "chapter": 13,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 13, 19 ]
+            }
+        ]
+        },
+    
+        "relationships": {
+        "description": "Of good and bad company",
+        "references": [
+            {
+            "chapter": 13,
+            "verses": [ 20 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 3 ]
+            }
+        ]
+        },
+    
+        "education": {
+        "description": "Of the education of children",
+        "references": [
+            {
+            "chapter": 13,
+            "verses": [ 24 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 18 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 11 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 6, 15 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 14,
+            "verses": [ 14 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 15, 17 ]
+            }
+        ]
+        },
+    
+        "godlyFear": {
+        "description": "Of the fear of the Lord",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 2, 26, 27 ]
+            },
+            {
+            "chapter": 15,
+            "verses": [ 16, 33 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 6 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 23 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 4 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 17, 18 ]
+            }
+        ]
+        },
+    
+        "bearingWitness": {
+        "description": "Of true and false witness-bearing",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 5, 25 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 5, 9, 28 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 18 ]
+            }
+        ]
+        },
+    
+        "scorners": {
+        "description": "Of scorners",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 6, 9 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 24 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 9 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 9 ]
+            }
+        ]
+        },
+    
+        "caution": {
+        "description": "Of credulity and caution",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 15, 16 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 12 ]
+            }
+        ]
+        },
+    
+        "subjects": {
+        "description": "Of kings and their subjects",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 28, 34, 35 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 10, 12, 13, 14, 15 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 6, 12 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 2, 8, 26, 28 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 11 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 23, 24, 25 ]
+            },
+            {
+            "chapter": 30,
+            "verses": [ 2, 3, 4, 5 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 2, 3, 15, 16 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 5, 12, 14, 26 ]
+            }
+        ]
+        },
+    
+        "envy": {
+        "description": "Of envy, especially envying sinners",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 30 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 17, 18 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 1, 2, 19, 20 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 4 ]
+            }
+        ]
+        },
+    
+        "providence": {
+        "description": "Of God's omniscience, and his universal providence",
+        "references": [
+            {
+            "chapter": 15,
+            "verses": [ 3, 11 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 1, 4, 9, 33 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 21 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 12, 24 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 1, 30, 31 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 26 ]
+            }
+        ]
+        },
+    
+        "reputation": {
+        "description": "Of a good and ill name",
+        "references": [
+            {
+            "chapter": 15,
+            "verses": [ 30 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 1 ]
+            }
+        ]
+        },
+    
+        "haughtiness": {
+        "description": "Of men's good opinion of themselves",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 16,
+            "verses": [ 2, 25 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 6 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 2 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 26 ]
+            }
+        ]
+        },
+    
+        "devotion": {
+        "description": "Of devotion towards God, and dependence on him",
+        "references": [
+            {
+            "chapter": 16,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 26 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 25 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 25 ]
+            }
+        ]
+        },
+    
+        "godsFavor": {
+        "description": "Of the happiness of God's favor",
+        "references": [
+            {
+            "chapter": 16,
+            "verses": [ 7 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 26 ]
+            }
+        ]
+        },
+    
+        "wisdom": {
+        "description": "Excitements to get wisdom",
+        "references": [
+            {
+            "chapter": 16,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 8, 20 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 17, 18, 19, 20, 21 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 15, 16, 22, 23, 24, 25 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 13, 14 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 11 ]
+            }
+        ]
+        },
+    
+        "temptation": {
+        "description": "Cautions against temptations",
+        "references": [
+            {
+            "chapter": 16,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 27 ]
+            }
+        ]
+        },
+    
+        "ageAndYouth": {
+        "description": "Of old age and youth",
+        "references": [
+            {
+            "chapter": 16,
+            "verses": [ 31 ]
+            },
+            {
+            "chapter": 17,
+            "verses": [ 6 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 29 ]
+            }
+        ]
+        },
+    
+        "servants": {
+        "description": "Of servants",
+        "references": [
+            {
+            "chapter": 17,
+            "verses": [ 2 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 19, 21 ]
+            }
+        ]
+        },
+    
+        "bribes": {
+        "description": "Of bribery",
+        "references": [
+            {
+            "chapter": 17,
+            "verses": [ 8, 23 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 16 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 14 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 21 ]
+            }
+        ]
+        },
+    
+        "reproof": {
+        "description": "Of reproof and correction",
+        "references": [
+            {
+            "chapter": 17,
+            "verses": [ 10 ]
+            },
+            {
+            "chapter": 19,
+            "verses": [ 25, 29 ]
+            },
+            {
+            "chapter": 20,
+            "verses": [ 30 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 11 ]
+            },
+            {
+            "chapter": 25,
+            "verses": [ 12 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 3 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 5, 6, 22 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 23 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 1 ]
+            }
+        ]
+        },
+    
+        "ungratefulness": {
+        "description": "Of ingratitude",
+        "references": [
+            {
+            "chapter": 17,
+            "verses": [ 13 ]
+            }
+        ]
+        },
+    
+        "friendship": {
+        "description": "Of friendship",
+        "references": [
+            {
+            "chapter": 17,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 18,
+            "verses": [ 24 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 9, 10, 14, 17 ]
+            }
+        ]
+        },
+    
+        "moderation": {
+        "description": "Of sensual pleasures",
+        "references": [
+            {
+            "chapter": 21,
+            "verses": [ 17 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 1, 2, 3, 6, 7, 8, 19, 20, 21 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 7 ]
+            }
+        ]
+        },
+    
+        "drunkenness": {
+        "description": "Of drunkenness",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 1 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 23, 29, 30, 31, 32, 33, 34, 35 ]
+            }
+        ]
+        },
+    
+        "corruption": {
+        "description": "Of the universal corruption of nature",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 9 ]
+            }
+        ]
+        },
+    
+        "flattery": {
+        "description": "Of flattery",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 19 ]
+            },
+            {
+            "chapter": 26,
+            "verses": [ 28 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 23 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 5 ]
+            }
+        ]
+        },
+    
+        "dishonoringParents": {
+        "description": "Of undutiful children",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 20 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 24 ]
+            }
+        ]
+        },
+    
+        "illGottenGains": {
+        "description": "Of the short continuance of what is ill-gotten",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 21 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 6, 7 ]
+            },
+            {
+            "chapter": 22,
+            "verses": [ 8 ]
+            },
+            {
+            "chapter": 28,
+            "verses": [ 8 ]
+            }
+        ]
+        },
+    
+        "revenge": {
+        "description": "Of revenge",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 17, 18, 29 ]
+            }
+        ]
+        },
+    
+        "rashVows": {
+        "description": "Of sacrilege",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 25 ]
+            }
+        ]
+        },
+    
+        "conscience": {
+        "description": "Of conscience",
+        "references": [
+            {
+            "chapter": 20,
+            "verses": [ 27 ]
+            },
+            {
+            "chapter": 27,
+            "verses": [ 19 ]
+            }
+        ]
+        },
+    
+        "acceptableWorship": {
+        "description": "Of the preference of moral duties before ceremonial",
+        "references": [
+            {
+            "chapter": 15,
+            "verses": [ 8 ]
+            },
+            {
+            "chapter": 21,
+            "verses": [ 3, 27 ]
+            }
+        ]
+        },
+    
+        "wastefulness": {
+        "description": "Of prodigality and wastefulness",
+        "references": [
+            {
+            "chapter": 21,
+            "verses": [ 20 ]
+            }
+        ]
+        },
+    
+        "godliness": {
+        "description": "The triumphs of wisdom and godliness",
+        "references": [
+            {
+            "chapter": 21,
+            "verses": [ 22 ]
+            },
+            {
+            "chapter": 24,
+            "verses": [ 15, 16 ]
+            }
+        ]
+        },
+    
+        "stubbornness": {
+        "description": "Of frowardness and tractableness",
+        "references": [
+            {
+            "chapter": 22,
+            "verses": [ 5 ]
+            }
+        ]
+        },
+    
+        "uncleanness": {
+        "description": "Of uncleanness",
+        "references": [
+            {
+            "chapter": 22,
+            "verses": [ 14 ]
+            },
+            {
+            "chapter": 23,
+            "verses": [ 27, 28 ]
+            }
+        ]
+        },
+    
+        "affliction": {
+        "description": "Of fainting in affliction",
+        "references": [
+            {
+            "chapter": 24,
+            "verses": [ 10 ]
+            }
+        ]
+        },
+    
+        "distressed": {
+        "description": "Of helping the distressed",
+        "references": [
+            {
+            "chapter": 14,
+            "verses": [ 11, 12 ]
+            }
+        ]
+        },
+    
+        "honoringAuthority": {
+        "description": "Of loyalty to the government",
+        "references": [
+            {
+            "chapter": 24,
+            "verses": [ 21, 22 ]
+            }
+        ]
+        },
+    
+        "forgivingEnemies": {
+        "description": "Of forgiving enemies",
+        "references": [
+            {
+            "chapter": 25,
+            "verses": [ 21, 22 ]
+            }
+        ]
+        },
+    
+        "causelessCurses": {
+        "description": "Of causeless curse",
+        "references": [
+            {
+            "chapter": 26,
+            "verses": [ 2 ]
+            }
+        ]
+        },
+    
+        "answeringFools": {
+        "description": "Of answering fools",
+        "references": [
+            {
+            "chapter": 26,
+            "verses": [ 4, 5 ]
+            }
+        ]
+        },
+    
+        "discontentedness": {
+        "description": "Of unsettledness and unsatisfiedness",
+        "references": [
+            {
+            "chapter": 27,
+            "verses": [ 8, 20 ]
+            }
+        ]
+        },
+    
+        "courage": {
+        "description": "Of cowardliness and courage",
+        "references": [
+            {
+            "chapter": 28,
+            "verses": [ 1 ]
+            }
+        ]
+        },
+    
+        "characterOfAuthorities": {
+        "description": "The people's interest in the character of their rulers",
+        "references": [
+            {
+            "chapter": 28,
+            "verses": [ 12, 28 ]
+            },
+            {
+            "chapter": 29,
+            "verses": [ 2, 16 ]
+            },
+            {
+            "chapter": 11,
+            "verses": [ 10, 11 ]
+            }
+        ]
+        },
+    
+        "repentance": {
+        "description": "The benefit of repentance and holy fear",
+        "references": [
+            {
+            "chapter": 28,
+            "verses": [ 13, 14 ]
+            }
+        ]
+        },
+    
+        "murder": {
+        "description": "The punishment of murder",
+        "references": [
+            {
+            "chapter": 28,
+            "verses": [ 17 ]
+            }
+        ]
+        },
+    
+        "stinginess": {
+        "description": "Of hastening to be rich",
+        "references": [
+            {
+            "chapter": 28,
+            "verses": [ 20, 22 ]
+            }
+        ]
+        },
+    
+        "enmity": {
+        "description": "The enmity of the wicked against the godly",
+        "references": [
+            {
+            "chapter": 29,
+            "verses": [ 10, 27 ]
+            }
+        ]
+        },
+    
+        "meansOfGrace": {
+        "description": "The necessity of the means of grace",
+        "references": [
+            {
+            "chapter": 29,
+            "verses": [ 18 ]
+            }
+        ]
+    }
+  }
+}

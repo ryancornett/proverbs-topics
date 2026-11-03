@@ -4,25 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" sizes="any">
   <title>Proverbs Topical Index</title>
+  <script>
+    let theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    try {
+      const saved = localStorage.getItem("proverbs-theme");
+      if (saved === "dark" || saved === "light") theme = saved;
+    } catch { /* Use the system preference. */ }
+    document.documentElement.dataset.theme = theme;
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
+    <a class="skip" href="#topicGrid">Skip to topics</a>
     <header>
+      <div class="mast">
+        <button id="aboutBtn" aria-haspopup="dialog">About the topics</button>
+        <button id="themeBtn" aria-label="Dark theme" aria-pressed="false">
+          <svg class="icon-sun" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+          <svg class="icon-moon" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+        </button>
+      </div>
       <h1>Proverbs Topical Index</h1>
-      <p class="subtitle">77 Topics & Reference Reader</p>
+      <p class="subtitle">All verses are from the Berean Standard Bible (BSB).</p>
     </header>
 
     <div class="toolbar">
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search 77 topics, descriptions, or verses (e.g. 'wisdom', '22:6')...">
+        <label for="searchInput">Find a topic</label>
+        <input type="search" id="searchInput" placeholder="Try wisdom or 22:6">
       </div>
       <div class="controls-right">
         <button class="btn" id="randomBtn">Random Topic</button>
         <button class="btn btn-secondary" id="viewAllBtn">View All</button>
-        <select id="sortSelect">
+        <label id="sizeControl" hidden>Topics per page
+          <select id="pageSize"><option>6</option><option>10</option><option>20</option><option value="all">All</option></select>
+        </label>
+        <select aria-label="Sort topics" id="sortSelect">
           <option value="name-asc">Sort: A-Z</option>
           <option value="name-desc">Sort: Z-A</option>
           <option value="ref-desc">Most References</option>
@@ -36,12 +59,26 @@
       <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;" onclick="showAllMode()">Show All (77)</button>
     </div>
 
-    <div class="stats" id="statsDisplay"></div>
+    <div class="stats" id="statsDisplay" role="status"></div>
 
-    <main class="grid" id="topicGrid"></main>
+    <main class="grid" id="topicGrid" tabindex="-1"></main>
+    <nav id="pagination" aria-label="Topic pages" hidden></nav>
   </div>
 
-  <div id="tooltip"></div>
+  <footer class="container"><span>Index adapted by <a href="https://ryancornett.com/">Ryan Cornett</a></span>
+    <nav aria-label="Study resources"><a href="https://custombibleplan.com/">Custom Bible Plan Generator</a><a href="https://lofi.bible/">Lofi.Bible</a><a href="https://readbsb.com/">ReadBSB</a><a href="https://github.com/ryancornett/proverbs-topics">GitHub</a></nav>
+  </footer>
+  <dialog id="about" aria-labelledby="aboutTitle">
+    <h2 id="aboutTitle" tabindex="-1" autofocus>Where the topics come from</h2>
+    <p>Matthew Henry grouped references under 77 headings in his <cite>Commentary on the Whole Bible</cite> (1706). He introduced his index to Proverbs with these words.</p>
+    <blockquote>Twenty chapters of the book of Proverbs (beginning with ch.x.and ending with ch. xxix.), consisting mostly of entire sentences in each verse, could not well be reduced to proper heads, and the contents of them gathered; I have therefore here put the contents of all these chapters together, which perhaps may be of some use to those who desire to see at once all that is said of any one head in these chapters. Some of the verses, perhaps, I have not put under the same heads that another would have put them under, but the most of them fall (I hope) naturally enough to the places I have assigned them.</blockquote>
+    <h3>A modern rendering</h3><p>Twenty chapters of the book of Proverbs, from chapter 10 to chapter 29, mostly consist of complete sentences in each verse. It&#x27;s challenging to condense these verses into specific themes, as the passages are not thematically focused. This might be helpful for those who want to see all that is said on a particular topic in these chapters at once. While some verses might not be categorized exactly as someone else would, I&#x27;ve tried to place them where they seem to fit best.</p>
+    <h3>Editorial note</h3><p>I named the topics, &#x27;Americanized&#x27; some words (honour: honor, favour: favor), and combined item descriptions (combinations are separated by ellipses). In the near future I hope to categorize the passages Henry left to his commentary proper (chapters 1-9, 30-31).</p>
+    <p>— Ryan Cornett</p>
+    <form method="dialog"><button>Close</button></form>
+  </dialog>
+  <div id="tooltip" role="tooltip"></div>
+  <script src="bsb-verses.js"></script>
 
   <script src="app.js"></script>
 </body>

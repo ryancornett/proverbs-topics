@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Proverbs Topical Index</title>
+  <rect width="64" height="64" rx="12" fill="#225e46"/>
+  <path fill="#d4af73" d="M4 15q15-4 28 3 13-7 28-3v35q-16-3-28 4-12-7-28-4z"/>
+  <path fill="#fffef9" d="M6 10q15-2 26 5 11-7 26-5v35q-15-2-26 5-11-7-26-5z"/>
+  <path stroke="#d4af73" stroke-width="2" d="M32 15v35"/>
+  <path fill="#225e46" fill-rule="evenodd" d="M19 18h16c9 0 13 4 13 10s-5 10-14 10h-4v5l5 1v3H19v-3l4-1V22l-4-1zm11 4v12h4c5 0 7-2 7-6s-2-6-7-6z"/>
+</svg>

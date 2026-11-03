@@ -777,29 +777,6 @@ const dataset = {
   },
 };
 
-// 2. DYNAMIC VERSE FETCHING & CACHING ENGINE
-const verseCache = {};
-
-async function fetchVerseText(tag) {
-  if (verseCache[tag]) return verseCache[tag];
-
-  const [chapter, verse] = tag.split(":");
-  const apiUrl = `https://bible-api.com/proverbs%20${chapter}:${verse}?translation=web`;
-
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) throw new Error("Network error");
-    const data = await response.json();
-    const cleanedText = data.text
-      ? data.text.replace(/\n/g, " ").trim()
-      : `Prov ${tag}`;
-    verseCache[tag] = cleanedText;
-    return cleanedText;
-  } catch (err) {
-    return `[Click BibleHub link to read Proverbs ${tag}]`;
-  }
-}
-
 function getBibleHubUrl(chapter, verse) {
   return `https://biblehub.com/proverbs/${chapter}-${verse}.htm`;
 }
@@ -836,46 +813,55 @@ const statsDisplay = document.getElementById("statsDisplay");
 const modeBanner = document.getElementById("modeBanner");
 const tooltip = document.getElementById("tooltip");
 
+const pageSize = document.querySelector("#pageSize");
+const pagination = document.querySelector("#pagination");
+let page = 1;
+
+function resetPage() {
+  page = 1;
+  render();
+}
+
 function selectRandomTopic() {
+  searchInput.value = "";
   const randomIndex = Math.floor(Math.random() * topics.length);
   singleTopicKey = topics[randomIndex].key;
   isSingleMode = true;
-  render();
+  resetPage();
 }
 
 function showAllMode() {
+  searchInput.value = "";
   isSingleMode = false;
-  render();
+  resetPage();
 }
 
-async function toggleExpand(key) {
-  const container = document.getElementById(`expand-${key}`);
-  const btn = document.getElementById(`btn-${key}`);
-  if (!container) return;
-
-  const isActive = container.classList.contains("active");
-  if (isActive) {
-    container.classList.remove("active");
-    btn.innerHTML = "Read Full Verses";
-  } else {
-    container.classList.add("active");
-    btn.innerHTML = "Loading Verses...";
-
-    const topic = topics.find((t) => t.key === key);
-    if (topic) {
-      for (let r of topic.refList) {
-        const verseEl = document.getElementById(`text-${key}-${r.tag}`);
-        if (verseEl) {
-          const text = await fetchVerseText(r.tag);
-          verseEl.textContent = text;
-        }
-      }
+function referenceChips(refs) {
+  const groups = [];
+  for (const ref of refs) {
+    const group = groups.at(-1);
+    const previous = group?.at(-1);
+    if (previous?.chapter === ref.chapter && previous.verse + 1 === ref.verse) {
+      group.push(ref);
+    } else {
+      groups.push([ref]);
     }
-    btn.innerHTML = "🔼 Hide Verses";
   }
+  return groups.map(group => {
+    const first = group[0];
+    const last = group.at(-1);
+    const range = group.length > 1;
+    const label = range ? `${first.formatted}–${last.verse}` : first.formatted;
+    const url = range ? `https://biblehub.com/bsb/proverbs/${first.chapter}.htm` : getBibleHubUrl(first.chapter, first.verse);
+    return `<a class="chip" href="${url}" target="_blank" rel="noopener"
+      data-tags="${group.map(r => r.tag).join(" ")}" data-label="${label}"
+      onfocus="showTooltip(event)" onblur="hideTooltip()"
+      onmouseenter="showTooltip(event)" onmouseleave="hideTooltip()">${label} ↗</a>`;
+  }).join("");
 }
 
 function render() {
+  hideTooltip();
   const query = searchInput.value.toLowerCase().trim();
   const sortValue = sortSelect.value;
 
@@ -904,19 +890,47 @@ function render() {
     if (sortValue === "ref-asc") return a.refCount - b.refCount;
   });
 
-  statsDisplay.textContent =
-    isSingleMode && !query
-      ? `Spotlight Topic (1 of ${topics.length})`
-      : `Showing ${filtered.length} of ${topics.length} topics`;
+  const size = pageSize.value === "all" ? topics.length : Number(pageSize.value);
+  const pages = Math.ceil(filtered.length / size);
+  const start = (page - 1) * size;
+  document.querySelector("#sizeControl").hidden = isSingleMode;
+  pagination.hidden = isSingleMode || pages < 2;
+  pagination.replaceChildren();
+  if (!pagination.hidden) {
+    function addPageButton(label, destination, disabled = false, numbered = false) {
+      const button = document.createElement("button");
+      button.textContent = label;
+      button.dataset.page = destination;
+      button.disabled = disabled;
+      if (numbered) {
+        button.setAttribute("aria-label", `Page ${destination}`);
+        if (destination === page) button.setAttribute("aria-current", "page");
+      }
+      pagination.append(button);
+    }
+    addPageButton("First", 1, page === 1);
+    addPageButton("Previous", page - 1, page === 1);
+    for (let n = 1; n <= pages; n++) addPageButton(n, n, false, true);
+    addPageButton("Next", page + 1, page === pages);
+    addPageButton("Last", pages, page === pages);
+  }
+  statsDisplay.textContent = isSingleMode
+    ? `Spotlight Topic (1 of ${topics.length})`
+    : filtered.length
+      ? `Showing ${start + 1}–${Math.min(start + size, filtered.length)} of ${filtered.length} topics`
+      : "0 matching topics";
 
   if (filtered.length === 0) {
-    grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--text-muted);">No topics matching "${query}"</div>`;
+    grid.textContent = `No topics match “${query}”.`;
     return;
   }
 
-  grid.innerHTML = filtered
-    .map(
-      (t) => `
+  grid.innerHTML = filtered.slice(start, start + size).map(t => {
+    const matching = query ? t.refList.filter(r => r.formatted.toLowerCase().includes(query)) : [];
+    const narrow = matching.length > 0 && matching.length < t.refCount;
+    const matches = new Set(matching.map(r => r.tag));
+    const extra = r => narrow && !matches.has(r.tag) ? "data-extra hidden" : "";
+    return `
     <article class="card">
       <div>
         <div class="card-header">
@@ -924,61 +938,40 @@ function render() {
         </div>
         <p class="card-desc">${t.description}</p>
         
-        <div class="chip-container">
-          ${t.refList
-            .map(
-              (r) => `
-            <a href="${getBibleHubUrl(r.chapter, r.verse)}" 
-               target="_blank" 
-               rel="noopener"
-               class="chip" 
-               data-tag="${r.tag}"
-               onmouseenter="showTooltip(event, '${r.tag}', '${r.formatted}')"
-               onmouseleave="hideTooltip()">
-               ${r.formatted} ↗
-            </a>
-          `,
-            )
-            .join("")}
-        </div>
+        <div class="chip-container" data-topic="${t.key}">${referenceChips(narrow ? matching : t.refList)}</div>
       </div>
 
       <div>
-        <button class="expand-btn" id="btn-${t.key}" onclick="toggleExpand('${t.key}')">
-          Read Full Verses (${t.refCount})
-        </button>
-        <div class="expanded-verses" id="expand-${t.key}">
+        <details class="expanded-verses">
+          <summary>Read verses (<span class="read-count">${narrow ? matching.length : t.refCount}</span>)</summary>
           ${t.refList
             .map(
               (r) => `
-            <div class="verse-entry">
+            <div class="verse-entry" ${extra(r)}>
               <div class="verse-ref-header">
-                <span>${r.formatted}</span>
+                <span>${r.formatted} · BSB</span>
                 <a href="${getBibleHubUrl(r.chapter, r.verse)}" target="_blank" class="biblehub-link">BibleHub ↗</a>
               </div>
-              <div id="text-${t.key}-${r.tag}">Hover chip or click expand to load verse text...</div>
+              <p>${bsbVerses[r.tag]}</p>
             </div>
           `,
             )
             .join("")}
-        </div>
+        </details>
+        ${narrow ? `<button class="ref-toggle" data-count="${matching.length}" data-total="${t.refCount}" aria-expanded="false">Show all references</button>` : ""}
       </div>
     </article>
-  `,
-    )
-    .join("");
+  `;
+  }).join("");
 }
 
-// 5. TOOLTIP INTERACTION WITH LIVE FETCHING
-async function showTooltip(event, tag, title) {
-  tooltip.innerHTML = `<strong>${title}</strong><br><em>Loading text...</em>`;
+function showTooltip(event) {
+  const { tags, label } = event.currentTarget.dataset;
+  const passage = tags.split(" ").map(tag => bsbVerses[tag]).join(" ");
+  tooltip.textContent = `${label} · BSB — ${passage}`;
   tooltip.style.display = "block";
-
-  positionTooltip(event.target);
-
-  const text = await fetchVerseText(tag);
-  tooltip.innerHTML = `<strong>${title}</strong><br>${text}`;
-  positionTooltip(event.target);
+  event.currentTarget.setAttribute("aria-describedby", "tooltip");
+  positionTooltip(event.currentTarget);
 }
 
 function positionTooltip(target) {
@@ -998,15 +991,40 @@ function positionTooltip(target) {
 }
 
 function hideTooltip() {
+  grid.querySelector('[aria-describedby="tooltip"]')?.removeAttribute("aria-describedby");
   tooltip.style.display = "none";
 }
 
 // 6. EVENT LISTENERS
 searchInput.addEventListener("input", () => {
   if (searchInput.value.trim() !== "") isSingleMode = false;
-  render();
+  resetPage();
 });
-sortSelect.addEventListener("change", render);
+sortSelect.addEventListener("change", resetPage);
+pageSize.addEventListener("change", resetPage);
+pagination.addEventListener("click", event => {
+  const button = event.target.closest("button[data-page]");
+  if (!button) return;
+  page = Number(button.dataset.page);
+  render();
+  grid.focus();
+  grid.scrollIntoView({ block: "start" });
+});
+grid.addEventListener("click", event => {
+  const button = event.target.closest(".ref-toggle");
+  if (!button) return;
+  const card = button.closest(".card");
+  const showAll = button.getAttribute("aria-expanded") === "false";
+  const chips = card.querySelector(".chip-container");
+  const topic = topics.find(t => t.key === chips.dataset.topic);
+  const query = searchInput.value.toLowerCase().trim();
+  const refs = showAll ? topic.refList : topic.refList.filter(r => r.formatted.toLowerCase().includes(query));
+  chips.innerHTML = referenceChips(refs);
+  card.querySelectorAll("[data-extra]").forEach(el => { el.hidden = !showAll; });
+  card.querySelector(".read-count").textContent = showAll ? button.dataset.total : button.dataset.count;
+  button.setAttribute("aria-expanded", String(showAll));
+  button.textContent = showAll ? "Show matching references" : "Show all references";
+});
 document
   .getElementById("randomBtn")
   .addEventListener("click", selectRandomTopic);
@@ -1014,3 +1032,27 @@ document.getElementById("viewAllBtn").addEventListener("click", showAllMode);
 
 // Initial load: 1 random spotlight topic
 selectRandomTopic();
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") hideTooltip();
+});
+const about = document.querySelector("#about");
+document.querySelector("#aboutBtn").addEventListener("click", () => about.showModal());
+about.addEventListener("click", event => {
+  if (event.target !== about) return;
+  const { left, right, top, bottom } = about.getBoundingClientRect();
+  if (event.clientX < left || event.clientX >= right || event.clientY < top || event.clientY >= bottom) {
+    about.close();
+  }
+});
+const themeBtn = document.querySelector("#themeBtn");
+function updateThemeControl() {
+  themeBtn.setAttribute("aria-pressed", document.documentElement.dataset.theme === "dark");
+}
+updateThemeControl();
+themeBtn.addEventListener("click", () => {
+  const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = theme;
+  updateThemeControl();
+  try { localStorage.setItem("proverbs-theme", theme); } catch { /* Storage unavailable. */ }
+});

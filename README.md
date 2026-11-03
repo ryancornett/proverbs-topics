@@ -8,3 +8,5 @@ A modern rendering of the above:
 > Twenty chapters of the book of Proverbs, from chapter 10 to chapter 29, mostly consist of complete sentences in each verse. It's challenging to condense these verses into specific themes, as the passages are not thematically focused. This might be helpful for those who want to see all that is said on a particular topic in these chapters at once. While some verses might not be categorized exactly as someone else would, I've tried to place them where they seem to fit best.
 
 *I named the topics, 'Americanized' some words (honour: honor, favour: favor), and combined item descriptions (combinations are separated by ellipses). In the near future I hope to categorize the passages Henry left to his commentary proper (chapters 1-9, 30-31).*
+
+— Ryan Cornett

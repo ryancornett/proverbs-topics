@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proverbs Topical Index</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Proverbs Topical Index</h1>
+      <p class="subtitle">77 Topics & Reference Reader</p>
+    </header>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search 77 topics, descriptions, or verses (e.g. 'wisdom', '22:6')...">
+      </div>
+      <div class="controls-right">
+        <button class="btn" id="randomBtn">Random Topic</button>
+        <button class="btn btn-secondary" id="viewAllBtn">View All</button>
+        <select id="sortSelect">
+          <option value="name-asc">Sort: A-Z</option>
+          <option value="name-desc">Sort: Z-A</option>
+          <option value="ref-desc">Most References</option>
+          <option value="ref-asc">Fewest References</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="modeBanner" class="mode-banner" style="display: none;">
+      <span><strong>Spotlight Mode:</strong> Showing one random topic.</span>
+      <button class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;" onclick="showAllMode()">Show All (77)</button>
+    </div>
+
+    <div class="stats" id="statsDisplay"></div>
+
+    <main class="grid" id="topicGrid"></main>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

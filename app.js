@@ -85,6 +85,8 @@ const dataset = {
   },
   data: {
     parenting: {
+      aliases: ["children", "parenthood", "raising children"],
+      relatedTopics: ["ageAndYouth", "dishonoringParents", "education", "honorableWoman"],
       description:
         "Of the comfort, or grief, parents have in their children, according as they are wise or foolish, godly or ungodly",
       references: [
@@ -98,6 +100,8 @@ const dataset = {
       ],
     },
     virtuousLiving: {
+      aliases: ["righteous living", "virtue", "godly living", "true happiness"],
+      relatedTopics: ["contentment", "godliness", "righteousHappiness"],
       description:
         "Of the world's insufficiency, and religion's sufficiency, to make us happy...",
       references: [
@@ -111,6 +115,8 @@ const dataset = {
       ],
     },
     diligence: {
+      aliases: ["hard work", "laziness", "laziness and work", "industriousness", "work ethic", "sloth"],
+      relatedTopics: ["servants", "usefulness", "wastefulness"],
       description:
         "Of slothfulness and diligence... particularly the improving or neglecting opportunities",
       references: [
@@ -132,6 +138,8 @@ const dataset = {
       ],
     },
     righteousHappiness: {
+      aliases: ["joy of the righteous", "blessings of righteousness", "misery of the wicked"],
+      relatedTopics: ["virtuousLiving"],
       description:
         "The happiness of the righteous, and the misery of the wicked",
       references: [
@@ -149,6 +157,8 @@ const dataset = {
       ],
     },
     honor: {
+      aliases: ["honour", "dignity", "dishonor", "shame"],
+      relatedTopics: ["humility", "reputation", "respectingOthers"],
       description: "Of honor and dishonor, and of vain-glory",
       references: [
         { chapter: 10, verses: [7] },
@@ -160,6 +170,8 @@ const dataset = {
       ],
     },
     obedience: {
+      aliases: ["obeying", "disobedience", "following instructions"],
+      relatedTopics: ["acceptableWorship", "reproof", "stubbornness"],
       description: "The wisdom of obedience, and folly of disobedience",
       references: [
         { chapter: 10, verses: [8, 17] },
@@ -171,6 +183,8 @@ const dataset = {
       ],
     },
     usefulness: {
+      aliases: ["helpfulness", "service", "doing good", "mischief"],
+      relatedTopics: ["charity", "diligence", "servants"],
       description: "Of mischievousness and usefulness",
       references: [
         { chapter: 10, verses: [10, 23] },
@@ -186,6 +200,8 @@ const dataset = {
       ],
     },
     powerOfWords: {
+      aliases: ["speech", "tongue", "words", "speaking", "communication"],
+      relatedTopics: ["answeringFools", "causelessCurses", "gossip", "silence", "slander"],
       description:
         "The praise of wise and good discourse, and the hurt and shame of an ungoverned tongue",
       references: [
@@ -204,6 +220,8 @@ const dataset = {
       ],
     },
     contentiousness: {
+      aliases: ["quarreling", "quarrelling", "arguments", "conflict", "strife", "peacemaking"],
+      relatedTopics: ["enmity", "friendship", "meekness"],
       description: "Of love and hatred, peaceableness and contention",
       references: [
         { chapter: 10, verses: [12] },
@@ -217,6 +235,8 @@ const dataset = {
       ],
     },
     wealth: {
+      aliases: ["riches", "money", "poverty", "rich and poor"],
+      relatedTopics: ["charity", "illGottenGains", "stinginess", "surety"],
       description: "Of the rich and poor",
       references: [
         { chapter: 10, verses: [5, 22] },
@@ -231,6 +251,8 @@ const dataset = {
       ],
     },
     deceit: {
+      aliases: ["dishonesty", "lying", "lies", "deception", "honesty", "truthfulness"],
+      relatedTopics: ["bearingWitness", "flattery", "slander"],
       description:
         "Of lying, fraud, and dissimulation, and of truth and sincerity",
       references: [
@@ -243,6 +265,8 @@ const dataset = {
       ],
     },
     slander: {
+      aliases: ["defamation", "false accusations", "character assassination"],
+      relatedTopics: ["causelessCurses", "deceit", "gossip", "powerOfWords", "reputation"],
       description: "Of slandering",
       references: [
         { chapter: 10, verses: [18] },
@@ -251,6 +275,8 @@ const dataset = {
       ],
     },
     silence: {
+      aliases: ["listening", "keeping quiet", "talkativeness", "restraint in speech"],
+      relatedTopics: ["powerOfWords"],
       description: "Of talkativeness and silence",
       references: [
         { chapter: 10, verses: [19] },
@@ -262,6 +288,8 @@ const dataset = {
       ],
     },
     justice: {
+      aliases: ["fairness", "injustice", "equity", "honest dealings"],
+      relatedTopics: ["bearingWitness", "bribes", "mercy", "murder"],
       description: "Of justice and injustice",
       references: [
         { chapter: 11, verses: [1] },
@@ -276,6 +304,8 @@ const dataset = {
       ],
     },
     humility: {
+      aliases: ["humbleness", "modesty", "pride"],
+      relatedTopics: ["haughtiness", "honor", "reproof"],
       description: "Of pride and humility",
       references: [
         { chapter: 11, verses: [2] },
@@ -290,6 +320,8 @@ const dataset = {
       ],
     },
     respectingOthers: {
+      aliases: ["respect", "courtesy", "contempt", "despising others"],
+      relatedTopics: ["honor", "mercy", "scorners"],
       description: "Of despising and respecting others",
       references: [
         { chapter: 11, verses: [12] },
@@ -297,6 +329,8 @@ const dataset = {
       ],
     },
     gossip: {
+      aliases: ["rumors", "rumours", "talebearing", "spreading secrets"],
+      relatedTopics: ["fidelity", "powerOfWords", "slander"],
       description: "Of tale-bearing",
       references: [
         { chapter: 11, verses: [13] },
@@ -307,6 +341,8 @@ const dataset = {
       ],
     },
     rashness: {
+      aliases: ["impulsiveness", "impulsivity", "haste", "thinking before acting"],
+      relatedTopics: ["caution", "prudence", "rashVows"],
       description: "Of rashness and deliberation",
       references: [
         { chapter: 11, verses: [14] },
@@ -320,6 +356,8 @@ const dataset = {
       ],
     },
     surety: {
+      aliases: ["cosigning", "co-signing", "guaranteeing debts", "loan guarantees"],
+      relatedTopics: ["caution", "friendship", "wealth"],
       description: "Of suretiship",
       references: [
         { chapter: 11, verses: [15] },
@@ -330,6 +368,8 @@ const dataset = {
       ],
     },
     honorableWoman: {
+      aliases: ["honourable woman", "wife", "wives", "marriage", "women"],
+      relatedTopics: ["fidelity", "parenting", "relationships"],
       description: "Of good and bad women, or wives",
       references: [
         { chapter: 11, verses: [16, 22] },
@@ -343,6 +383,8 @@ const dataset = {
       ],
     },
     mercy: {
+      aliases: ["compassion", "kindness", "cruelty", "mercifulness"],
+      relatedTopics: ["charity", "distressed", "forgivingEnemies", "justice", "respectingOthers", "ungratefulness"],
       description: "Of mercifulness and unmercifulness",
       references: [
         { chapter: 11, verses: [17] },
@@ -353,6 +395,8 @@ const dataset = {
       ],
     },
     charity: {
+      aliases: ["generosity", "giving", "helping the poor", "almsgiving"],
+      relatedTopics: ["distressed", "mercy", "usefulness", "wealth"],
       description: "Of charity to the poor, and uncharitableness",
       references: [
         { chapter: 11, verses: [24, 25, 26] },
@@ -364,6 +408,8 @@ const dataset = {
       ],
     },
     contentment: {
+      aliases: ["satisfaction", "being satisfied", "enough", "covetousness"],
+      relatedTopics: ["discontentedness", "envy", "stinginess", "virtuousLiving"],
       description: "Of covetousness and contentment",
       references: [
         { chapter: 11, verses: [29] },
@@ -372,6 +418,8 @@ const dataset = {
       ],
     },
     meekness: {
+      aliases: ["gentleness", "patience", "anger", "temper", "self-control"],
+      relatedTopics: ["contentiousness", "moderation", "revenge"],
       description: "Of anger and meekness",
       references: [
         { chapter: 12, verses: [16] },
@@ -387,6 +435,8 @@ const dataset = {
       ],
     },
     melancholy: {
+      aliases: ["sadness", "sorrow", "grief", "cheerfulness", "a heavy heart"],
+      relatedTopics: ["affliction", "hope"],
       description: "Of melancholy and cheerfulness",
       references: [
         { chapter: 12, verses: [25] },
@@ -398,10 +448,14 @@ const dataset = {
       ],
     },
     hope: {
+      aliases: ["expectation", "waiting", "disappointment", "hope deferred"],
+      relatedTopics: ["affliction", "melancholy"],
       description: "Of hope and expectation",
       references: [{ chapter: 13, verses: [12, 19] }],
     },
     prudence: {
+      aliases: ["good judgment", "good judgement", "discernment", "common sense", "foolishness"],
+      relatedTopics: ["answeringFools", "caution", "rashness", "wisdom"],
       description: "Of prudence and foolishness",
       references: [
         { chapter: 7, verses: [27] },
@@ -417,6 +471,8 @@ const dataset = {
       ],
     },
     fidelity: {
+      aliases: ["faithfulness", "loyalty", "trustworthiness", "betrayal"],
+      relatedTopics: ["flattery", "friendship", "gossip", "honorableWoman", "ungratefulness"],
       description: "Of treachery and fidelity",
       references: [
         { chapter: 13, verses: [17] },
@@ -424,6 +480,8 @@ const dataset = {
       ],
     },
     relationships: {
+      aliases: ["companions", "company", "influences", "peer pressure"],
+      relatedTopics: ["friendship", "honorableWoman", "temptation"],
       description: "Of good and bad company",
       references: [
         { chapter: 13, verses: [20] },
@@ -433,6 +491,8 @@ const dataset = {
       ],
     },
     education: {
+      aliases: ["teaching children", "instruction", "training children", "discipline"],
+      relatedTopics: ["meansOfGrace", "parenting"],
       description: "Of the education of children",
       references: [
         { chapter: 13, verses: [24] },
@@ -445,6 +505,8 @@ const dataset = {
       ],
     },
     godlyFear: {
+      aliases: ["fear of God", "fear of the Lord", "reverence", "awe"],
+      relatedTopics: ["courage", "devotion", "godliness", "repentance"],
       description: "Of the fear of the Lord",
       references: [
         { chapter: 14, verses: [2, 26, 27] },
@@ -456,6 +518,8 @@ const dataset = {
       ],
     },
     bearingWitness: {
+      aliases: ["testimony", "witnesses", "perjury", "false testimony"],
+      relatedTopics: ["deceit", "justice"],
       description: "Of true and false witness-bearing",
       references: [
         { chapter: 14, verses: [5, 25] },
@@ -466,6 +530,8 @@ const dataset = {
       ],
     },
     scorners: {
+      aliases: ["mockers", "scoffers", "ridicule", "mockery"],
+      relatedTopics: ["answeringFools", "respectingOthers", "stubbornness"],
       description: "Of scorners",
       references: [
         { chapter: 14, verses: [6, 9] },
@@ -476,6 +542,8 @@ const dataset = {
       ],
     },
     caution: {
+      aliases: ["carefulness", "vigilance", "gullibility", "believing everything"],
+      relatedTopics: ["prudence", "rashness", "surety"],
       description: "Of credulity and caution",
       references: [
         { chapter: 14, verses: [15, 16] },
@@ -483,6 +551,8 @@ const dataset = {
       ],
     },
     subjects: {
+      aliases: ["citizens", "rulers and citizens", "kings", "government"],
+      relatedTopics: ["characterOfAuthorities", "honoringAuthority"],
       description: "Of kings and their subjects",
       references: [
         { chapter: 14, verses: [28, 34, 35] },
@@ -497,6 +567,8 @@ const dataset = {
       ],
     },
     envy: {
+      aliases: ["jealousy", "envying others", "coveting"],
+      relatedTopics: ["contentment", "discontentedness"],
       description: "Of envy, especially envying sinners",
       references: [
         { chapter: 14, verses: [30] },
@@ -506,6 +578,8 @@ const dataset = {
       ],
     },
     providence: {
+      aliases: ["God's rule", "sovereignty", "God's knowledge", "God's plans"],
+      relatedTopics: ["conscience", "devotion", "godsFavor"],
       description: "Of God's omniscience, and his universal providence",
       references: [
         { chapter: 15, verses: [3, 11] },
@@ -518,6 +592,8 @@ const dataset = {
       ],
     },
     reputation: {
+      aliases: ["good name", "credibility", "public character"],
+      relatedTopics: ["honor", "slander"],
       description: "Of a good and ill name",
       references: [
         { chapter: 15, verses: [30] },
@@ -525,6 +601,8 @@ const dataset = {
       ],
     },
     haughtiness: {
+      aliases: ["arrogance", "conceit", "self-importance", "pride"],
+      relatedTopics: ["humility", "stubbornness"],
       description: "Of men's good opinion of themselves",
       references: [
         { chapter: 14, verses: [12] },
@@ -536,6 +614,8 @@ const dataset = {
       ],
     },
     devotion: {
+      aliases: ["trust in God", "dependence on God", "commitment to God"],
+      relatedTopics: ["godlyFear", "providence"],
       description: "Of devotion towards God, and dependence on him",
       references: [
         { chapter: 16, verses: [3] },
@@ -547,6 +627,8 @@ const dataset = {
       ],
     },
     godsFavor: {
+      aliases: ["God's favour", "divine favor", "divine favour", "blessing"],
+      relatedTopics: ["providence"],
       description: "Of the happiness of God's favor",
       references: [
         { chapter: 16, verses: [7] },
@@ -554,6 +636,8 @@ const dataset = {
       ],
     },
     wisdom: {
+      aliases: ["understanding", "seeking wisdom", "wise counsel"],
+      relatedTopics: ["ageAndYouth", "meansOfGrace", "prudence"],
       description: "Excitements to get wisdom",
       references: [
         { chapter: 16, verses: [16] },
@@ -566,6 +650,8 @@ const dataset = {
       ],
     },
     temptation: {
+      aliases: ["enticement", "seduction", "resisting sin"],
+      relatedTopics: ["drunkenness", "relationships", "uncleanness"],
       description: "Cautions against temptations",
       references: [
         { chapter: 16, verses: [17] },
@@ -573,6 +659,8 @@ const dataset = {
       ],
     },
     ageAndYouth: {
+      aliases: ["aging", "ageing", "old age", "young people", "elders"],
+      relatedTopics: ["parenting", "wisdom"],
       description: "Of old age and youth",
       references: [
         { chapter: 16, verses: [31] },
@@ -581,6 +669,8 @@ const dataset = {
       ],
     },
     servants: {
+      aliases: ["service to masters", "employees", "workers", "masters"],
+      relatedTopics: ["diligence", "honoringAuthority", "usefulness"],
       description: "Of servants",
       references: [
         { chapter: 17, verses: [2] },
@@ -589,6 +679,8 @@ const dataset = {
       ],
     },
     bribes: {
+      aliases: ["bribery", "payoffs", "dishonest gifts"],
+      relatedTopics: ["characterOfAuthorities", "illGottenGains", "justice"],
       description: "Of bribery",
       references: [
         { chapter: 17, verses: [8, 23] },
@@ -598,6 +690,8 @@ const dataset = {
       ],
     },
     reproof: {
+      aliases: ["correction", "rebuke", "constructive criticism", "accepting advice"],
+      relatedTopics: ["humility", "meansOfGrace", "obedience"],
       description: "Of reproof and correction",
       references: [
         { chapter: 17, verses: [10] },
@@ -612,10 +706,14 @@ const dataset = {
       ],
     },
     ungratefulness: {
+      aliases: ["ingratitude", "thanklessness", "gratitude", "thankfulness"],
+      relatedTopics: ["fidelity", "mercy"],
       description: "Of ingratitude",
       references: [{ chapter: 17, verses: [13] }],
     },
     friendship: {
+      aliases: ["friends", "companionship", "true friends"],
+      relatedTopics: ["contentiousness", "fidelity", "relationships", "surety"],
       description: "Of friendship",
       references: [
         { chapter: 17, verses: [17] },
@@ -624,6 +722,8 @@ const dataset = {
       ],
     },
     moderation: {
+      aliases: ["temperance", "self-control", "overindulgence", "appetite"],
+      relatedTopics: ["drunkenness", "meekness", "wastefulness"],
       description: "Of sensual pleasures",
       references: [
         { chapter: 21, verses: [17] },
@@ -632,6 +732,8 @@ const dataset = {
       ],
     },
     drunkenness: {
+      aliases: ["drinking", "alcohol", "intoxication", "sobriety"],
+      relatedTopics: ["moderation", "temptation"],
       description: "Of drunkenness",
       references: [
         { chapter: 20, verses: [1] },
@@ -639,10 +741,14 @@ const dataset = {
       ],
     },
     corruption: {
+      aliases: ["sinful nature", "depravity", "human sinfulness", "purity of heart"],
+      relatedTopics: ["conscience", "repentance"],
       description: "Of the universal corruption of nature",
       references: [{ chapter: 20, verses: [9] }],
     },
     flattery: {
+      aliases: ["insincere praise", "manipulation", "smooth talk"],
+      relatedTopics: ["deceit", "fidelity"],
       description: "Of flattery",
       references: [
         { chapter: 20, verses: [19] },
@@ -652,6 +758,8 @@ const dataset = {
       ],
     },
     dishonoringParents: {
+      aliases: ["disrespecting parents", "disobedient children", "dishonouring parents"],
+      relatedTopics: ["parenting"],
       description: "Of undutiful children",
       references: [
         { chapter: 20, verses: [20] },
@@ -659,6 +767,8 @@ const dataset = {
       ],
     },
     illGottenGains: {
+      aliases: ["dishonest profit", "stolen wealth", "fraud", "theft"],
+      relatedTopics: ["bribes", "wealth"],
       description: "Of the short continuance of what is ill-gotten",
       references: [
         { chapter: 20, verses: [21] },
@@ -668,6 +778,8 @@ const dataset = {
       ],
     },
     revenge: {
+      aliases: ["vengeance", "retaliation", "getting even"],
+      relatedTopics: ["enmity", "forgivingEnemies", "meekness"],
       description: "Of revenge",
       references: [
         { chapter: 20, verses: [22] },
@@ -675,10 +787,14 @@ const dataset = {
       ],
     },
     rashVows: {
+      aliases: ["hasty promises", "vows", "sacrilege", "sacred commitments"],
+      relatedTopics: ["acceptableWorship", "rashness"],
       description: "Of sacrilege",
       references: [{ chapter: 20, verses: [25] }],
     },
     conscience: {
+      aliases: ["self-examination", "inner life", "motives"],
+      relatedTopics: ["corruption", "providence", "repentance"],
       description: "Of conscience",
       references: [
         { chapter: 20, verses: [27] },
@@ -686,6 +802,8 @@ const dataset = {
       ],
     },
     acceptableWorship: {
+      aliases: ["true worship", "sacrifice", "empty ritual", "pleasing God"],
+      relatedTopics: ["godliness", "obedience", "rashVows"],
       description: "Of the preference of moral duties before ceremonial",
       references: [
         { chapter: 15, verses: [8] },
@@ -693,10 +811,14 @@ const dataset = {
       ],
     },
     wastefulness: {
+      aliases: ["squandering", "extravagance", "thrift", "stewardship"],
+      relatedTopics: ["diligence", "moderation"],
       description: "Of prodigality and wastefulness",
       references: [{ chapter: 21, verses: [20] }],
     },
     godliness: {
+      aliases: ["piety", "holiness", "godly character"],
+      relatedTopics: ["acceptableWorship", "godlyFear", "virtuousLiving"],
       description: "The triumphs of wisdom and godliness",
       references: [
         { chapter: 21, verses: [22] },
@@ -704,10 +826,14 @@ const dataset = {
       ],
     },
     stubbornness: {
+      aliases: ["obstinacy", "unteachability", "teachability", "waywardness"],
+      relatedTopics: ["haughtiness", "obedience", "scorners"],
       description: "Of frowardness and tractableness",
       references: [{ chapter: 22, verses: [5] }],
     },
     uncleanness: {
+      aliases: ["sexual immorality", "adultery", "sexual temptation", "chastity"],
+      relatedTopics: ["temptation"],
       description: "Of uncleanness",
       references: [
         { chapter: 22, verses: [14] },
@@ -715,38 +841,56 @@ const dataset = {
       ],
     },
     affliction: {
+      aliases: ["hardship", "adversity", "suffering", "trials", "endurance"],
+      relatedTopics: ["courage", "hope", "melancholy"],
       description: "Of fainting in affliction",
       references: [{ chapter: 24, verses: [10] }],
     },
     distressed: {
+      aliases: ["helping the needy", "helping those in trouble", "relief"],
+      relatedTopics: ["charity", "mercy"],
       description: "Of helping the distressed",
       references: [{ chapter: 14, verses: [11, 12] }],
     },
     honoringAuthority: {
+      aliases: ["respect for authority", "civic duty", "honouring authority"],
+      relatedTopics: ["servants", "subjects"],
       description: "Of loyalty to the government",
       references: [{ chapter: 24, verses: [21, 22] }],
     },
     forgivingEnemies: {
+      aliases: ["forgiveness", "loving enemies", "kindness to enemies"],
+      relatedTopics: ["mercy", "revenge"],
       description: "Of forgiving enemies",
       references: [{ chapter: 25, verses: [21, 22] }],
     },
     causelessCurses: {
+      aliases: ["undeserved curses", "baseless curses", "cursing"],
+      relatedTopics: ["powerOfWords", "slander"],
       description: "Of causeless curse",
       references: [{ chapter: 26, verses: [2] }],
     },
     answeringFools: {
+      aliases: ["responding to fools", "foolish arguments", "answering wisely"],
+      relatedTopics: ["powerOfWords", "prudence", "scorners"],
       description: "Of answering fools",
       references: [{ chapter: 26, verses: [4, 5] }],
     },
     discontentedness: {
+      aliases: ["discontent", "dissatisfaction", "restlessness", "never satisfied"],
+      relatedTopics: ["contentment", "envy"],
       description: "Of unsettledness and unsatisfiedness",
       references: [{ chapter: 27, verses: [8, 20] }],
     },
     courage: {
+      aliases: ["bravery", "boldness", "fearlessness", "cowardice", "cowardliness"],
+      relatedTopics: ["affliction", "godlyFear"],
       description: "Of cowardliness and courage",
       references: [{ chapter: 28, verses: [1] }],
     },
     characterOfAuthorities: {
+      aliases: ["leadership", "rulers", "righteous leaders", "wicked rulers"],
+      relatedTopics: ["bribes", "subjects"],
       description: "The people's interest in the character of their rulers",
       references: [
         { chapter: 11, verses: [10, 11] },
@@ -755,22 +899,32 @@ const dataset = {
       ],
     },
     repentance: {
+      aliases: ["confession", "confessing sin", "turning from sin", "forsaking sin"],
+      relatedTopics: ["conscience", "corruption", "godlyFear"],
       description: "The benefit of repentance and holy fear",
       references: [{ chapter: 28, verses: [13, 14] }],
     },
     murder: {
+      aliases: ["killing", "bloodshed", "homicide"],
+      relatedTopics: ["enmity", "justice"],
       description: "The punishment of murder",
       references: [{ chapter: 28, verses: [17] }],
     },
     stinginess: {
+      aliases: ["greed", "avarice", "getting rich quick", "hoarding"],
+      relatedTopics: ["contentment", "wealth"],
       description: "Of hastening to be rich",
       references: [{ chapter: 28, verses: [20, 22] }],
     },
     enmity: {
+      aliases: ["hostility", "hatred", "enemies", "antagonism"],
+      relatedTopics: ["contentiousness", "murder", "revenge"],
       description: "The enmity of the wicked against the godly",
       references: [{ chapter: 29, verses: [10, 27] }],
     },
     meansOfGrace: {
+      aliases: ["God's instruction", "revelation", "biblical instruction", "God's law"],
+      relatedTopics: ["education", "reproof", "wisdom"],
       description: "The necessity of the means of grace",
       references: [{ chapter: 29, verses: [18] }],
     },
@@ -802,7 +956,8 @@ const topics = Object.keys(dataset.data).map((key) => {
     });
   });
 
-  return { key, title, description: item.description, refList, refCount };
+  return { key, title, description: item.description, refList, refCount,
+    aliases: item.aliases || [], relatedTopics: item.relatedTopics || [] };
 });
 
 // 4. UI RENDERING ENGINE
@@ -823,6 +978,8 @@ function resetPage() {
 }
 
 function selectRandomTopic() {
+  history.replaceState(null, "", location.pathname + location.search);
+  modeBanner.querySelector("span").textContent = "Spotlight Mode: Showing one random topic.";
   searchInput.value = "";
   const randomIndex = Math.floor(Math.random() * topics.length);
   singleTopicKey = topics[randomIndex].key;
@@ -831,6 +988,7 @@ function selectRandomTopic() {
 }
 
 function showAllMode() {
+  history.replaceState(null, "", location.pathname + location.search);
   searchInput.value = "";
   isSingleMode = false;
   resetPage();
@@ -871,7 +1029,8 @@ function render() {
     const matchesRefs = t.refList.some(
       (r) => r.formatted.toLowerCase().includes(query) || r.tag.includes(query),
     );
-    return matchesTitle || matchesDesc || matchesRefs;
+    const matchesAlias = t.aliases.some(alias => alias.toLowerCase().includes(query));
+    return matchesTitle || matchesDesc || matchesRefs || matchesAlias;
   });
 
   if (isSingleMode && !query) {
@@ -931,7 +1090,7 @@ function render() {
     const matches = new Set(matching.map(r => r.tag));
     const extra = r => narrow && !matches.has(r.tag) ? "data-extra hidden" : "";
     return `
-    <article class="card">
+    <article class="card" id="topic-${t.key}">
       <div>
         <div class="card-header">
           <h2 class="card-title">${t.title}</h2>
@@ -957,6 +1116,12 @@ function render() {
           `,
             )
             .join("")}
+        </details>
+        <details class="related-topics">
+          <summary>Related topics (${t.relatedTopics.length})</summary>
+          <div class="related-chips">
+            ${t.relatedTopics.map(key => `<a class="chip" href="#topic-${key}" data-related-topic="${key}">${dataset.meta.keyMap[key]}</a>`).join("")}
+          </div>
         </details>
         ${narrow ? `<button class="ref-toggle" data-count="${matching.length}" data-total="${t.refCount}" aria-expanded="false">Show all references</button>` : ""}
       </div>
@@ -997,6 +1162,7 @@ function hideTooltip() {
 
 // 6. EVENT LISTENERS
 searchInput.addEventListener("input", () => {
+  history.replaceState(null, "", location.pathname + location.search);
   if (searchInput.value.trim() !== "") isSingleMode = false;
   resetPage();
 });
@@ -1030,8 +1196,28 @@ document
   .addEventListener("click", selectRandomTopic);
 document.getElementById("viewAllBtn").addEventListener("click", showAllMode);
 
-// Initial load: 1 random spotlight topic
-selectRandomTopic();
+function openLinkedTopic() {
+  const key = location.hash.slice("#topic-".length);
+  if (!location.hash.startsWith("#topic-") || !dataset.data[key]) return false;
+  searchInput.value = "";
+  singleTopicKey = key;
+  isSingleMode = true;
+  resetPage();
+  modeBanner.querySelector("span").textContent = "Selected topic";
+  grid.focus();
+  grid.scrollIntoView({ block: "start" });
+  return true;
+}
+window.addEventListener("hashchange", () => {
+  if (!openLinkedTopic()) showAllMode();
+});
+grid.addEventListener("click", event => {
+  const link = event.target.closest("[data-related-topic]");
+  if (link && link.hash === location.hash) openLinkedTopic();
+});
+
+// Open bookmarked topics, or start with a random topic.
+if (!openLinkedTopic()) selectRandomTopic();
 
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") hideTooltip();

@@ -88,3 +88,6 @@ blockquote { margin-inline: 0; border-left: 3px solid var(--gold); padding-left:
 footer a { text-decoration: none; font-weight: 700; transition: color .18s ease; }
 footer a:is(:hover,:focus-visible) { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { footer a { transition: none; } }
+
+.related-chips { display: flex; flex-wrap: wrap; gap: .5rem; padding-bottom: .75rem; }
+.related-chips .chip { display: inline-flex; align-items: center; min-height: 44px; }

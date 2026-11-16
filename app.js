@@ -1118,16 +1118,41 @@ addPageButton("Last page", pages, page === pages, false, "fa-angles-right");
     </span>
     <i class="fa-solid fa-chevron-down summary-chevron" aria-hidden="true"></i>
   </summary>
+
+  <div class="drawer-toolbar">
+    <button
+      type="button"
+      class="copy-btn copy-all-btn"
+      data-topic="${t.key}"
+      aria-label="Copy all verses for ${t.title}"
+    >
+      <i class="fa-regular fa-clone" aria-hidden="true"></i>
+      <span>Copy all verses</span>
+    </button>
+  </div>
+
   ${t.refList
     .map(
       (r) => `
-    <div class="verse-entry" ${extra(r)}>
+    <div class="verse-entry" data-tag="${r.tag}" ${extra(r)}>
       <div class="verse-ref-header">
         <span>${r.formatted} · BSB</span>
-        <a href="${getBibleHubUrl(r.chapter, r.verse)}" target="_blank" class="biblehub-link">
-          <span>BibleHub</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
+        <div class="verse-actions">
+          <button
+            type="button"
+            class="copy-btn"
+            data-tag="${r.tag}"
+            aria-label="Copy Proverbs ${r.tag}"
+            title="Copy verse"
+          >
+            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+            <span>Copy</span>
+          </button>
+          <a href="${getBibleHubUrl(r.chapter, r.verse)}" target="_blank" rel="noopener" class="biblehub-link">
+            <span>BibleHub</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
       <p>${bsbVerses[r.tag]}</p>
     </div>
@@ -1215,6 +1240,50 @@ grid.addEventListener("click", event => {
   button.setAttribute("aria-expanded", String(showAll));
   button.textContent = showAll ? "Show matching references" : "Show all references";
 });
+
+grid.addEventListener("click", async (event) => {
+  const copyBtn = event.target.closest(".copy-btn");
+  if (!copyBtn) return;
+
+  let textToCopy = "";
+  const isBulk = copyBtn.classList.contains("copy-all-btn");
+  const defaultIcon = isBulk ? "fa-regular fa-clone" : "fa-regular fa-copy";
+  const defaultText = isBulk ? "Copy all verses" : "Copy";
+
+  if (isBulk) {
+    const card = copyBtn.closest(".card");
+    const topic = topics.find((t) => t.key === copyBtn.dataset.topic);
+    const visibleEntries = [...card.querySelectorAll(".verse-entry:not([hidden])")];
+    const lines = visibleEntries.map((entry) => {
+      const tag = entry.dataset.tag;
+      return `${bsbVerses[tag]}\nProverbs ${tag} (BSB)`;
+    });
+
+    textToCopy = `${topic.title}\n${topic.description}\n\n${lines.join("\n")}\n\n(proverbsbytopic.org)`;
+  } else {
+    const tag = copyBtn.dataset.tag;
+    textToCopy = `${bsbVerses[tag]} — Proverbs ${tag} (BSB)`;
+  }
+
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+    const icon = copyBtn.querySelector("i");
+    const label = copyBtn.querySelector("span");
+
+    copyBtn.classList.add("copied");
+    icon.className = "fa-solid fa-check";
+    label.textContent = isBulk ? "Copied all!" : "Copied";
+
+    setTimeout(() => {
+      copyBtn.classList.remove("copied");
+      icon.className = defaultIcon;
+      label.textContent = defaultText;
+    }, 1600);
+  } catch {
+    /* Clipboard access unavailable */
+  }
+});
+
 document
   .getElementById("randomBtn")
   .addEventListener("click", selectRandomTopic);

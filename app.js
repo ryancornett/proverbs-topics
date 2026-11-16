@@ -1012,9 +1012,12 @@ function referenceChips(refs) {
     const label = range ? `${first.formatted}–${last.verse}` : first.formatted;
     const url = range ? `https://biblehub.com/bsb/proverbs/${first.chapter}.htm` : getBibleHubUrl(first.chapter, first.verse);
     return `<a class="chip" href="${url}" target="_blank" rel="noopener"
-      data-tags="${group.map(r => r.tag).join(" ")}" data-label="${label}"
-      onfocus="showTooltip(event)" onblur="hideTooltip()"
-      onmouseenter="showTooltip(event)" onmouseleave="hideTooltip()">${label} ↗</a>`;
+  data-tags="${group.map(r => r.tag).join(" ")}" data-label="${label}"
+  onfocus="showTooltip(event)" onblur="hideTooltip()"
+  onmouseenter="showTooltip(event)" onmouseleave="hideTooltip()">
+  <span>${label}</span>
+  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+</a>`;
   }).join("");
 }
 
@@ -1056,22 +1059,28 @@ function render() {
   pagination.hidden = isSingleMode || pages < 2;
   pagination.replaceChildren();
   if (!pagination.hidden) {
-    function addPageButton(label, destination, disabled = false, numbered = false) {
-      const button = document.createElement("button");
-      button.textContent = label;
-      button.dataset.page = destination;
-      button.disabled = disabled;
-      if (numbered) {
-        button.setAttribute("aria-label", `Page ${destination}`);
-        if (destination === page) button.setAttribute("aria-current", "page");
-      }
-      pagination.append(button);
-    }
-    addPageButton("First", 1, page === 1);
-    addPageButton("Previous", page - 1, page === 1);
-    for (let n = 1; n <= pages; n++) addPageButton(n, n, false, true);
-    addPageButton("Next", page + 1, page === pages);
-    addPageButton("Last", pages, page === pages);
+    function addPageButton(label, destination, disabled = false, numbered = false, iconClass = null) {
+  const button = document.createElement("button");
+  button.dataset.page = destination;
+  button.disabled = disabled;
+  if (iconClass) {
+    button.setAttribute("aria-label", label);
+    button.title = label;
+    button.innerHTML = `<i class="fa-solid ${iconClass}" aria-hidden="true"></i>`;
+  } else {
+    button.textContent = label;
+  }
+  if (numbered) {
+    button.setAttribute("aria-label", `Page ${destination}`);
+    if (destination === page) button.setAttribute("aria-current", "page");
+  }
+  pagination.append(button);
+}
+addPageButton("First page", 1, page === 1, false, "fa-angles-left");
+addPageButton("Previous page", page - 1, page === 1, false, "fa-angle-left");
+for (let n = 1; n <= pages; n++) addPageButton(n, n, false, true);
+addPageButton("Next page", page + 1, page === pages, false, "fa-angle-right");
+addPageButton("Last page", pages, page === pages, false, "fa-angles-right");
   }
   statsDisplay.textContent = isSingleMode
     ? `Spotlight Topic (1 of ${topics.length})`
@@ -1102,27 +1111,42 @@ function render() {
 
       <div>
         <details class="expanded-verses">
-          <summary>Read verses (<span class="read-count">${narrow ? matching.length : t.refCount}</span>)</summary>
-          ${t.refList
-            .map(
-              (r) => `
-            <div class="verse-entry" ${extra(r)}>
-              <div class="verse-ref-header">
-                <span>${r.formatted} · BSB</span>
-                <a href="${getBibleHubUrl(r.chapter, r.verse)}" target="_blank" class="biblehub-link">BibleHub ↗</a>
-              </div>
-              <p>${bsbVerses[r.tag]}</p>
-            </div>
-          `,
-            )
-            .join("")}
-        </details>
-        <details class="related-topics">
-          <summary>Related topics (${t.relatedTopics.length})</summary>
-          <div class="related-chips">
-            ${t.relatedTopics.map(key => `<a class="chip" href="#topic-${key}" data-related-topic="${key}">${dataset.meta.keyMap[key]}</a>`).join("")}
-          </div>
-        </details>
+  <summary>
+    <span class="summary-label">
+      <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+      <span>Read verses (<span class="read-count">${narrow ? matching.length : t.refCount}</span>)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down summary-chevron" aria-hidden="true"></i>
+  </summary>
+  ${t.refList
+    .map(
+      (r) => `
+    <div class="verse-entry" ${extra(r)}>
+      <div class="verse-ref-header">
+        <span>${r.formatted} · BSB</span>
+        <a href="${getBibleHubUrl(r.chapter, r.verse)}" target="_blank" class="biblehub-link">
+          <span>BibleHub</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p>${bsbVerses[r.tag]}</p>
+    </div>
+  `,
+    )
+    .join("")}
+</details>
+<details class="related-topics">
+  <summary>
+    <span class="summary-label">
+      <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+      <span>Related topics (${t.relatedTopics.length})</span>
+    </span>
+    <i class="fa-solid fa-chevron-down summary-chevron" aria-hidden="true"></i>
+  </summary>
+  <div class="related-chips">
+    ${t.relatedTopics.map(key => `<a class="chip" href="#topic-${key}" data-related-topic="${key}">${dataset.meta.keyMap[key]}</a>`).join("")}
+  </div>
+</details>
         ${narrow ? `<button class="ref-toggle" data-count="${matching.length}" data-total="${t.refCount}" aria-expanded="false">Show all references</button>` : ""}
       </div>
     </article>
